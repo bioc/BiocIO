@@ -89,7 +89,7 @@
 #' @importFrom methods findMethods getClass getClassDef is new packageSlot show
 #' @importFrom tools file_ext file_path_as_absolute file_path_sans_ext
 #'
-#' @export
+#' @exportClass BiocFile
 setClass(
     "BiocFile",
     representation(resource = "character_OR_connection"),
@@ -97,7 +97,7 @@ setClass(
 )
 
 #' @rdname BiocFile-class
-#' @export
+#' @exportClass BiocFileList
 setClass(
     "BiocFileList",
     prototype = prototype(elementType = "BiocFile"),
