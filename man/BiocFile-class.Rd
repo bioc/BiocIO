@@ -40,7 +40,7 @@ fileFormat(x)
 
 \S4method{show}{BiocFile}(object)
 
-FileForFormat(path, format = file_ext(path))
+FileForFormat(path, format = file_ext(path), prefix = NULL, suffix = "File")
 
 \S4method{as.character}{BiocFile}(x)
 }
@@ -59,6 +59,12 @@ original resource}
 
 \item{format}{\code{character(1)} The file extension conducive to a file class
 name, e.g., \code{CSVFile}}
+
+\item{prefix}{\code{character(1)} The prefix to prepend to the format class name,
+e.g., \code{Spatial} for a class \code{SpatialCSV}.}
+
+\item{suffix}{\code{character(1)} The suffix to append to the format class name,
+e.g., \code{File} for a class \code{CSVFile}.}
 }
 \value{
 For constructors, an instance of that class. For extractors such as
@@ -86,6 +92,15 @@ represented by the \code{BiocFile} object, if possible.}
 be called directly on a character file path, in which case it uses a
 heuristic based on the file extension.}
 }
+}
+
+\section{FileForFormat}{
+
+The \code{prefix} and \code{suffix} arguments are used to filter the class names to
+those that match the pattern \code{paste0(prefix, format, suffix)}. If either
+\code{prefix} or \code{suffix} are \code{NULL}, they are ignored. Note that the search is
+case insensitive and does require the \code{format} to be in the name of the
+class.
 }
 
 \examples{

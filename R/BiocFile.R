@@ -180,22 +180,40 @@ setMethod("show", "BiocFile", function(object) {
 #' @param format `character(1)` The file extension conducive to a file class
 #'   name, e.g., `CSVFile`
 #'
+#' @param suffix `character(1)` The suffix to append to the format class name,
+#'   e.g., `File` for a class `CSVFile`.
+#'
+#' @param prefix `character(1)` The prefix to prepend to the format class name,
+#'   e.g., `Spatial` for a class `SpatialCSV`.
+#'
+#' @section FileForFormat:
+#'   The `prefix` and `suffix` arguments are used to filter the class names to
+#'   those that match the pattern `paste0(prefix, format, suffix)`. If either
+#'   `prefix` or `suffix` are `NULL`, they are ignored. Note that the search is
+#'   case insensitive and does require the `format` to be in the name of the
+#'   class.
+#'
 #' @export
-FileForFormat <- function(path, format = file_ext(path)) {
+FileForFormat <-
+    function(path, format = file_ext(path), prefix = NULL, suffix = "File")
+{
     if (!(isSingleString(path) || is(path, "connection")))
         stop("'path' must be a single string or a connection object")
     if (!isSingleString(format))
         stop("'format' must be a single string")
     if (format == "")
         stop("Cannot detect format (no extension found in file name)")
-    fileClassName <- paste0(format, "File")
+    fileClassName <- paste0(prefix, format, suffix)
     signatureClasses <- function(fun, pos) {
         matrix(unlist(findMethods(fun)@signatures), 3)[pos,]
     }
     fileClassNames <- unique(
         c(signatureClasses(export, 2), signatureClasses(import, 1))
     )
-    fileClassNames <- fileClassNames[grepl("File$", fileClassNames)]
+    cpattern <-
+        if (!missing(prefix)) paste0("^", prefix) else paste0(suffix, "$")
+    classHits <- grepl(cpattern, fileClassNames, ignore.case = TRUE)
+    fileClassNames <- fileClassNames[classHits]
     fileSubClassNames <- unlist(lapply(fileClassNames, function(x) {
         names(getClassDef(x)@subclasses)
     }), use.names = FALSE)
