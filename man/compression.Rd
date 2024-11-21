@@ -30,9 +30,10 @@ class}
 \item{con}{The connection from which data is loaded or to which data is
 saved. If this is a \code{character} vector, it is assumed to be a file name and
 a corresponding file connection is created and then closed after exporting
-the object. If it is a \linkS4class{BiocFile} derivative, the data is loaded from
-or saved to the underlying resource. If missing, the function will return
-the output as a character vector, rather than writing to a connection.}
+the object. If it is a \link[=BiocFile-class]{BiocFile} derivative, the
+data is loaded from or saved to the underlying resource. If missing, the
+function will return the output as a character vector, rather than writing
+to a connection.}
 
 \item{...}{Parameters to pass to the format-specific method.}
 
