@@ -23,24 +23,22 @@
 #' @section Accessor Methods:
 #'   In the code snippets below, `x` represents a `BiocFile` object.
 #'
-#' \describe{
-#'   \item{`path(x)`}{Gets the path, as a `character` vector, to the resource
-#'     represented by the `BiocFile` object, if possible.}
-#'   \item{`resource(x)`}{Gets the low-level resource, either a character vector
-#'     (a path or URL) or a connection.}
-#'   \item{`fileFormat(x)`}{Gets a string identifying the file format. Can also
-#'     be called directly on a character file path, in which case it uses a
-#'     heuristic based on the file extension.}
-#' }
+#' - `path(x)`: Gets the path, as a `character` vector, to the resource
+#'   represented by the `BiocFile` object, if possible.
+#' - `resource(x)`: Gets the low-level resource, either a character vector
+#'   (a path or URL) or a connection.
+#' - `fileFormat(x)`: Gets a string identifying the file format. Can also
+#'   be called directly on a character file path, in which case it uses a
+#'   heuristic based on the file extension.
 #'
 #' @author Michael Lawrence
 #'
 #' @seealso Implementing classes include:
-#'   \link[rtracklayer:BigWigFile]{BigWigFile},
-#'   \link[rtracklayer:TwoBitFile]{TwoBitFile},
-#'   \link[rtracklayer:BEDFile]{BEDFile},
-#'   \link[rtracklayer:GFFFile]{GFFFile},
-#'   \link[rtracklayer:WIGFile]{WIGFile}
+#'   [BigWigFile][rtracklayer::BigWigFile-class],
+#'   [TwoBitFile][rtracklayer::TwoBitFile-class],
+#'   [BEDFile][rtracklayer::BEDFile-class],
+#'   [GFFFile][rtracklayer::GFFFile-class],
+#'   [WIGFile][rtracklayer::WIGFile-class]
 #'
 #' @docType class
 #'

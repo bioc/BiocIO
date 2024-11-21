@@ -14,12 +14,9 @@
 #'   object
 #'
 #' @section Related functions:
-#'   \describe{
-#'     \item{`FileForFormat(path, format = file_ext(path))`}{
-#'       Determines the file type of `path` and returns a high-level file object
-#'       such as BamFile, BEDFile, BigWigFile, etc.
-#'     }
-#'   }
+#' * `FileForFormat(path, format = file_ext(path))`:
+#' Determines the file type of `path` and returns a high-level file object such
+#' as BamFile, BEDFile, BigWigFile, etc.
 #'
 #' @examples
 #' file <- tempfile(fileext = ".gzip")

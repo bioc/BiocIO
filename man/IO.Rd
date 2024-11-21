@@ -107,12 +107,12 @@ df <- import(csv)
 }
 \seealso{
 Format-specific options for the popular formats:
-\acronym{\link[rtracklayer:GFFFile]{GFF}},
-\acronym{\link[rtracklayer:BEDFile]{BED}},
-\acronym{\link[rtracklayer:BED15File]{Bed15}},
-\acronym{\link[rtracklayer:BEDGraphFile]{bedGraph}},
-\acronym{\link[rtracklayer:WIGFile]{WIG}},
-\acronym{\link[rtracklayer:BigWigFile]{BigWig}}
+\link[rtracklayer:GFFFile-class]{GFF},
+\link[rtracklayer:BEDFile-class]{BED},
+\link[rtracklayer:BEDFile-class]{Bed15},
+\link[rtracklayer:BEDFile-class]{bedGraph},
+\link[rtracklayer:WIGFile-class]{WIG},
+\link[rtracklayer:BigWigFile]{BigWig}
 }
 \author{
 Michael Lawrence

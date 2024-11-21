@@ -82,15 +82,14 @@ objects with a \code{BiocFileList}.
 \section{Accessor Methods}{
 
 In the code snippets below, \code{x} represents a \code{BiocFile} object.
-
-\describe{
-\item{\code{path(x)}}{Gets the path, as a \code{character} vector, to the resource
-represented by the \code{BiocFile} object, if possible.}
-\item{\code{resource(x)}}{Gets the low-level resource, either a character vector
-(a path or URL) or a connection.}
-\item{\code{fileFormat(x)}}{Gets a string identifying the file format. Can also
+\itemize{
+\item \code{path(x)}: Gets the path, as a \code{character} vector, to the resource
+represented by the \code{BiocFile} object, if possible.
+\item \code{resource(x)}: Gets the low-level resource, either a character vector
+(a path or URL) or a connection.
+\item \code{fileFormat(x)}: Gets a string identifying the file format. Can also
 be called directly on a character file path, in which case it uses a
-heuristic based on the file extension.}
+heuristic based on the file extension.
 }
 }
 
@@ -140,10 +139,10 @@ resource(csv)
 \seealso{
 Implementing classes include:
 \link[rtracklayer:BigWigFile]{BigWigFile},
-\link[rtracklayer:TwoBitFile]{TwoBitFile},
-\link[rtracklayer:BEDFile]{BEDFile},
-\link[rtracklayer:GFFFile]{GFFFile},
-\link[rtracklayer:WIGFile]{WIGFile}
+\link[rtracklayer:TwoBitFile-class]{TwoBitFile},
+\link[rtracklayer:BEDFile-class]{BEDFile},
+\link[rtracklayer:GFFFile-class]{GFFFile},
+\link[rtracklayer:WIGFile-class]{WIGFile}
 }
 \author{
 Michael Lawrence

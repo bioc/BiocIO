@@ -39,12 +39,12 @@
 #' @author Michael Lawrence
 #'
 #' @seealso Format-specific options for the popular formats:
-#' \acronym{\link[rtracklayer:GFFFile]{GFF}},
-#' \acronym{\link[rtracklayer:BEDFile]{BED}},
-#' \acronym{\link[rtracklayer:BED15File]{Bed15}},
-#' \acronym{\link[rtracklayer:BEDGraphFile]{bedGraph}},
-#' \acronym{\link[rtracklayer:WIGFile]{WIG}},
-#' \acronym{\link[rtracklayer:BigWigFile]{BigWig}}
+#' [GFF][rtracklayer::GFFFile-class],
+#' [BED][rtracklayer::BEDFile-class],
+#' [Bed15][rtracklayer::BEDFile-class],
+#' [bedGraph][rtracklayer::BEDFile-class],
+#' [WIG][rtracklayer::WIGFile-class],
+#' [BigWig][rtracklayer::BigWigFile-class]
 #'
 #' @keywords IO
 #' @examples

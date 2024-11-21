@@ -48,11 +48,10 @@ Methods and generics for file compression strategies.
 }
 \section{Related functions}{
 
-\describe{
-\item{\code{FileForFormat(path, format = file_ext(path))}}{
-Determines the file type of \code{path} and returns a high-level file object
-such as BamFile, BEDFile, BigWigFile, etc.
-}
+\itemize{
+\item \code{FileForFormat(path, format = file_ext(path))}:
+Determines the file type of \code{path} and returns a high-level file object such
+as BamFile, BEDFile, BigWigFile, etc.
 }
 }
 
